@@ -1,0 +1,22 @@
+// flex-column
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+// flex-row
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+// flex 정중앙 고정
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// flex 양쪽 정렬
+@mixin flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

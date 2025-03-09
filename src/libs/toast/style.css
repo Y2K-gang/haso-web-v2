@@ -1,0 +1,15 @@
+.Toastify__progress-bar {
+  height: 4px;
+}
+
+.progress-success {
+  background-color: #327dff !important;
+}
+
+.progress-error {
+  background-color: #ff3c3c !important;
+}
+
+.progress-info {
+  background-color: #4fd1c5 !important;
+}

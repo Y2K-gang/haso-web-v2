@@ -1,0 +1,6 @@
+@import "../../../styles/function/flex";
+
+.container {
+  @include flex-column;
+  height: 100%;
+}
