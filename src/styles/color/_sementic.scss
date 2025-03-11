@@ -1,4 +1,5 @@
-@use '../pallete/pallete' as *;
+@use 'pallete' as *;
+
 html[data-theme="light"] {
   --Primary-Normal: #{$Blue-50};
   --Primary-Alternative: #79A9FE;
@@ -32,7 +33,7 @@ html[data-theme="light"] {
   --Status-Negative: #{$Red-50};
   --Status-Cautionary: #{$Yellow-50};
   --Status-Positive: #{$Green-50};
-  --Status-Hovered: #000000;
+  --Status-Info: #{$Blue-50};
 
   --Static-White: #{$Common-00};
   --Static-Black: #{$Common-100};
