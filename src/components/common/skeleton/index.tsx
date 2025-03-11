@@ -1,21 +1,25 @@
 import dynamic from "next/dynamic";
-import Skeleton from "@mui/material/Skeleton";
-import {ComponentType} from "react";
+import { ComponentType } from "react";
+import MuiSkeleton from "@mui/material/Skeleton";
 
-type LazyLoadProps = {
+type SkeletonProps = {
     children: () => Promise<{ default: ComponentType<any> }>;
     skeletonWidth?: number;
     skeletonHeight?: number;
 };
 
-export default function LazyLoad({
-                                     children,
-                                     skeletonWidth = 300,
-                                     skeletonHeight = 200,
-                                 }: LazyLoadProps) {
+const Skeleton = ({
+                      children,
+                      skeletonWidth = 300,
+                      skeletonHeight = 200,
+                  }: SkeletonProps) => {
     const DynamicComponent = dynamic(children, {
-        loading: () => <Skeleton variant="rectangular" width={skeletonWidth} height={skeletonHeight}/>,
+        loading: () => (
+            <MuiSkeleton variant="rectangular" width={skeletonWidth} height={skeletonHeight} />
+        ),
     });
 
-    return <DynamicComponent/>;
-}
+    return <DynamicComponent />;
+};
+
+export default Skeleton;
