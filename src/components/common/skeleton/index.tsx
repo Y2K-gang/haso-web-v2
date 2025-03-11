@@ -1,31 +1,22 @@
-import dynamic from "next/dynamic";
-import MuiSkeleton from "@mui/material/Skeleton";
-import { ComponentType, ReactElement } from "react";
+import { useEffect, useState } from "react";
+import "./style.scss";
 
-type SkeletonProps = {
-    children?: () => Promise<{ default: ComponentType<any> }>;
-    component?: ReactElement;
-    skeletonWidth?: number;
-    skeletonHeight?: number;
-};
+interface SkeletonProps {
+    height?: number;
+}
 
-const Skeleton = ({
-                      children,
-                      component,
-                      skeletonWidth = 300,
-                      skeletonHeight = 200,
-                  }: SkeletonProps) => {
-    if (component) {
-        return component;
-    }
-
-    if (!children) {
-        return <MuiSkeleton variant="rectangular" width={skeletonWidth} height={skeletonHeight} />;
-    }
-
-    const DynamicComponent = dynamic(children);
-
-    return <DynamicComponent />;
+const Skeleton = ({ height = 50 }: SkeletonProps) => {
+    return (
+        <div className="bus-skeleton-container">
+            {Array.from({ length: 15 }).map((_, i) => (
+                <div
+                    className="bus-skeleton-item"
+                    key={i}
+                    style={{ height: `${height}px` }}
+                />
+            ))}
+        </div>
+    );
 };
 
 export default Skeleton;

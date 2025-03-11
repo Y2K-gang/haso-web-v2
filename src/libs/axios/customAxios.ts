@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig } from "axios";
 import { requestInterceptor } from "./requestInterceptor";
 import {responseErrorInterceptor} from "src/libs/axios/responseErrorInterceptor";
 import { REQUEST_TOKEN, ACCESS_TOKEN } from "src/constants/token/token.constants";
-import Token from "src/libs/token/session";
+import Token from "src/libs/token/cookie";
 
 const SERVER_URL = process.env.SERVER_URL;
 

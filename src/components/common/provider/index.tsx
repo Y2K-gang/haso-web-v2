@@ -1,3 +1,5 @@
+"use client";
+
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,10 +12,15 @@ import "src/styles/function/_flex.scss";
 
 const queryClient = new QueryClient();
 
-const Provider = () => {
+interface Props {
+    children: React.ReactNode
+}
+
+const Provider = ({children}: Props) => {
     return (
         <QueryClientProvider client={queryClient}>
             <ToastContainer position="top-right" autoClose={3000} closeOnClick={true}/>
+            {children}
         </QueryClientProvider>
     )
 }
