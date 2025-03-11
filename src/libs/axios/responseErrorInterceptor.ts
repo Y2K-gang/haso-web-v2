@@ -1,5 +1,5 @@
 import { AxiosError } from "axios";
-import Token from "src/libs/token/session"
+import Token from "src/libs/token/cookie"
 import { ACCESS_TOKEN,REFRESH_TOKEN, REQUEST_TOKEN } from "src/constants/token/token.constants";
 import DaodaAxios from "./customAxios";
 import { refresh } from "src/apis/auth/auth.api";

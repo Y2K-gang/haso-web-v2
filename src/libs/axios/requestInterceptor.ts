@@ -1,5 +1,5 @@
 import { InternalAxiosRequestConfig } from "axios";
-import Token from "src/libs/token/session";
+import Token from "src/libs/token/cookie";
 import { ACCESS_TOKEN, REFRESH_TOKEN, REQUEST_TOKEN } from "src/constants/token/token.constants";
 
 export const requestInterceptor = (

@@ -1,8 +1,8 @@
-@import "./fonts/typography";
+@use "./fonts/typography" as *;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  @include Body-Bold;
+  @include Body-Medium;
 }
