@@ -4,13 +4,11 @@ type LayoutProps = {
     children: React.ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({children}: LayoutProps) => {
     return (
-        <>
-            <div className="container">
-                <div className="wrap">{children}</div>
-            </div>
-        </>
+        <div className="container">
+            <main>{children}</main>
+        </div>
     );
 };
 

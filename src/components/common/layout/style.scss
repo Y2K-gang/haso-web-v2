@@ -1,6 +1,21 @@
 @import "../../../styles/function/flex";
 
 .container {
+  width: 100%;
+  height: 100vh;
   @include flex-column;
+  height: 100%;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Background-Normal);
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
   height: 100%;
 }
