@@ -1,6 +1,6 @@
-export interface SignUpProps {
+export interface SignUp {
     name: string;
-    id: string;
+    userId: string;
     password: string;
     passwordConfirm: string; // 비밀번호 확인
     tel: string;
@@ -11,12 +11,12 @@ export interface SignUpProps {
     business_no: string; // 사업자 등록 번호
 }
 
-export interface LoginProps {
-    id: string;
+export interface Login {
+    userId: string;
     password: string;
 }
 
-export interface ValidateProps extends SignUpProps {
+export interface ValidateProps extends SignUp {
     b_no: string; // 사업자 등록 번호
     start_dt: string; // 개업일자
     p_nm: string; // 대표자 성명
