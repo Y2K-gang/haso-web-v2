@@ -7,11 +7,25 @@
   gap: 10px;
   border: 1.5px solid var(--Line-Normal);
   border-radius: var(--Shape-ExtraSmall);
-  outline: none;
 
   input {
     @include Label-Medium;
     color: var(--Label-Assistive);
     border: none;
+    outline: none;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+
+    &::placeholder {
+      color: var(--Label-Assistive);
+    }
+
+    &:not(:placeholder-shown) {
+      color: var(--Label-Normal);
+    }
   }
 }
