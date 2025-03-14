@@ -1,5 +1,7 @@
 "use client"
 
+import Login from "src/app/auth/login/page";
+
 export default function Home() {
-    return <h1>test</h1>;
-}
+    return <Login />;
+};

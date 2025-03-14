@@ -1,0 +1,66 @@
+@use "src/styles/function/flex" as *;
+@use "src/styles/fonts/typography" as *;
+
+.login-container {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  gap: 20px;
+  @include flex-center;
+  @include flex-row;
+}
+
+.left {
+  @include flex-column;
+  padding: 10px;
+  gap: 5px;
+
+  .logo-container {
+    @include flex-center;
+    gap: 20px;
+  }
+
+  #description {
+    @include Title1-Bold;
+    color: var(--Label-Assistive);
+  }
+}
+
+#divider {
+  width: 2px;
+  height: 100%;
+  border-radius: var(--Shape-ExtraSmall);
+  background-color: var(--Line-Normal);
+}
+
+.right {
+  width: 400px;
+  @include flex-column;
+  gap: 20px;
+  padding: 10px;
+
+  .textField-container {
+    width: 100%;
+    @include flex-column;
+    padding: 5px 10px;
+    gap: 15px;
+  }
+
+  .routing-signup {
+    @include flex-right;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+
+    span {
+      @include Label-Medium;
+
+    }
+
+    .signup {
+      color: var(--Primary-Normal);
+      text-decoration: none;
+    }
+  }
+
+}

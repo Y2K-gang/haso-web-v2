@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useRef} from "react";
-import "./style.scss";
+import "../style.scss";
 import Symbol from "src/assets/icons/logo/symbol";
 import Wordmark from "src/assets/icons/logo/wordmark";
 import Human from "src/assets/icons/textField/human";
@@ -9,6 +9,8 @@ import MediumButton from "src/components/ui/button/medium";
 import TextField from "src/components/ui/textField";
 import Lock from "src/assets/icons/textField/lock";
 import useLogin from "src/hooks/auth/useLogin";
+import Link from "next/link";
+import Paths from "src/constants/paths/paths.constants";
 
 const Login = () => {
     const {loginData, handleLoginData, submitLoginData, handleKeyPress} = useLogin();
@@ -31,6 +33,14 @@ const Login = () => {
                         type="text"
                         value={loginData.userId}
                         onChange={handleLoginData}
+                        placeholder="이름을 입력해주세요"
+                        icon={<Human/>}
+                    />
+                    <TextField
+                        name="userId"
+                        type="text"
+                        value={loginData.userId}
+                        onChange={handleLoginData}
                         placeholder="아이디를 입력해주세요"
                         icon={<Human/>}
                     />
@@ -46,6 +56,10 @@ const Login = () => {
                         onClick={submitLoginData}
                         text="로그인하기"
                     />
+                    <div className="routing-signup">
+                        <span>계정이 없으신가요?</span>
+                        <Link className="signup" href={Paths.signup}><span>회원가입하기</span></Link>
+                    </div>
                 </div>
             </div>
         </main>

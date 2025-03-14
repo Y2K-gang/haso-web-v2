@@ -22,7 +22,7 @@ export interface ValidateProps extends SignUp {
     p_nm: string; // 대표자 성명
 }
 
-export interface LoginResponse {
+export interface Response {
     data : {
         accessToken: string;
         refreshToken: string;
