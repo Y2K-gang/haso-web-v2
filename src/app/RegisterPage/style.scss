@@ -1,0 +1,105 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.register-container {
+  padding: 10px;
+}
+
+.drop-area {
+  background-color: var(--Fill-Neutral);
+  width: 300px;
+  height: 300px;
+  border-radius: var(--Shape-ExtraSmall);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.drop-text {
+  position: absolute;
+  color: var(--Label-Normal);
+  @include Label-Medium;
+}
+
+.file-select-text {
+  color: var($Blue-60);
+}
+
+.has-image {
+  border: none;
+  cursor: default;
+}
+
+.submit-button {
+  margin-top: 20px;
+}
+
+.input-title {
+  @include HeadLine1-Medium
+}
+
+.register-input {
+  width: 100%;
+  height: 51px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid var(--Label-Assistive);
+  padding: 15px 10px;
+  outline: none;
+  ::placeholder {
+    @include Body-Regular
+  }
+}
+
+.common-style {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  @extend .common-style;
+  padding: 20px;
+  width: 560px;
+  gap: 30px;
+}
+
+.inputs {
+  @extend .common-style;
+  gap: 20px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.input-area {
+  @extend .common-style;
+  gap: 10px;
+  width: 100%;
+}
+
+.flex-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.radio-group-item {
+  display: flex;
+  gap: 10px;
+}
