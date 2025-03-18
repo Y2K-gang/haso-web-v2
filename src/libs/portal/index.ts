@@ -4,7 +4,7 @@ interface ModalPortalType {
     children: React.ReactNode;
 }
 
-const ModalPortal: React.FC<ModalPortalType> = ({ children }) => {
+const ModalPortal = ({ children }: ModalPortalType) => {
     const el = document.getElementById("modal");
     if (!el) {
         console.error('Element with id "modal" not found');
