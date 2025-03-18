@@ -9,6 +9,8 @@
   border-radius: var(--Shape-ExtraSmall);
 
   input {
+    width: 100%;
+    height: 100%;
     @include Label-Medium;
     color: var(--Label-Assistive);
     border: none;

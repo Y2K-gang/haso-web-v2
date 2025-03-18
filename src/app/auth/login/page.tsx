@@ -28,20 +28,13 @@ const Login = () => {
                 </div>
                 <div id="divider"/>
                 <div className="right" ref={divRef} onKeyDown={handleKeyPress}>
+                    <h2 id="d1">Login</h2>
                     <TextField
                         name="userId"
                         type="text"
                         value={loginData.userId}
                         onChange={handleLoginData}
                         placeholder="이름을 입력해주세요"
-                        icon={<Human/>}
-                    />
-                    <TextField
-                        name="userId"
-                        type="text"
-                        value={loginData.userId}
-                        onChange={handleLoginData}
-                        placeholder="아이디를 입력해주세요"
                         icon={<Human/>}
                     />
                     <TextField

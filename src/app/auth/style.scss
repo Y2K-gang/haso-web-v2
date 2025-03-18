@@ -39,6 +39,10 @@
   gap: 20px;
   padding: 10px;
 
+  #d1 {
+    @include Display1-Bold;
+    @include flex-center;
+  }
   .textField-container {
     width: 100%;
     @include flex-column;

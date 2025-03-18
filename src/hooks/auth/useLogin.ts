@@ -14,11 +14,13 @@ const useLogin = () => {
         password: "",
     });
 
+    // Input에서 받아온 값 저장
     const handleLoginData = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setLoginData(prev => ({ ...prev, [name]: value }));
     }, []);
 
+    // 사용자 편의성을 위해 Enter 키 입력시에도 로그인
     const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter") {
             e.preventDefault();
@@ -26,6 +28,7 @@ const useLogin = () => {
         };
     };
 
+    // 서버에게 보내기
     const submitLoginData = async () => {
         if (!loginData.userId.trim()) {
             Toast("info", "아이디를 입력해주세요.");
