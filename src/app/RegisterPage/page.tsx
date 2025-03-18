@@ -80,7 +80,7 @@ export default function RegisterPage() {
                                             type="radio"
                                             name="productType"
                                             value={type}
-                                            checked={formData.productType === type}
+                                            checked={formData.category === type}
                                             onChange={handleInputChange}
                                         />
                                         <label>{type}</label>
