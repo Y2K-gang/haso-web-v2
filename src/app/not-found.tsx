@@ -2,7 +2,7 @@ import Link from "next/link";
 import UnKnow from "src/assets/image/notfound/NotFound";
 import "./style.scss"
 import Paths from "src/constants/paths/paths.constants";
-import ArrowLeft from "src/assets/icons/arrow/left";
+import ArrowLeft from "src/components/ui/icons/arrow/left";
 
 const NotFound = () => {
     return (

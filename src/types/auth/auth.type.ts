@@ -2,7 +2,6 @@ export interface SignUp {
     name: string;
     userId: string;
     password: string;
-    passwordConfirm: string; // 비밀번호 확인
     tel: string;
     telAccess: string; // 전화번호 인증 번호
     store_name: string; // 상호명
