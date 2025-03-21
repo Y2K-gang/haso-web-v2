@@ -2,12 +2,12 @@
 
 import React, {useRef} from "react";
 import "../style.scss";
-import Symbol from "src/assets/icons/logo/symbol";
-import Wordmark from "src/assets/icons/logo/wordmark";
-import Human from "src/assets/icons/textField/human";
+import Symbol from "src/components/ui/icons/logo/symbol";
+import Wordmark from "src/components/ui/icons/logo/wordmark";
+import Human from "src/components/ui/icons/textField/human";
 import MediumButton from "src/components/ui/button/medium";
 import TextField from "src/components/ui/textField";
-import Lock from "src/assets/icons/textField/lock";
+import Lock from "src/components/ui/icons/textField/lock";
 import useLogin from "src/hooks/auth/useLogin";
 import Link from "next/link";
 import Paths from "src/constants/paths/paths.constants";

@@ -1,3 +1,5 @@
+"use client"
+
 import hasoAxios from "src/libs/axios/customAxios";
 import {Response, Login, NewAccessToken, SignUp} from "src/types/auth/auth.type";
 
@@ -12,7 +14,7 @@ export const login = async (login: Login) => {
     }
 };
 
-export const signUp = async (signupData: SignUp) => {
+export const signUp = async (signupData: SignUp | {}) => {
     try {
         const {data} = await hasoAxios.post<SignUp>(`${SERVER_URL}/member/signup`, signupData);
         return data;
