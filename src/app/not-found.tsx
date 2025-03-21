@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import UnKnow from "src/assets/image/notfound/NotFound";
 import "./style.scss"
