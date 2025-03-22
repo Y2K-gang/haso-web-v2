@@ -12,6 +12,7 @@ import Step2 from "src/components/steps/step2";
 import Step3 from "src/components/steps/step3";
 import Paths from "src/constants/paths/paths.constants";
 import ProgressBar from "src/components/ui/progressBar";
+import ArrowLeft from "src/components/ui/icons/arrow/left";
 
 const SignUp = () => {
     const { step, nextStep, prevStep, submitSignUpData, progress } = useSteps();
@@ -29,20 +30,24 @@ const SignUp = () => {
                     </div>
                     <p id="description">수산물 거래, 이제는 간편하게</p>
                 </div>
+
                 <div id="divider" />
+
                 <div className="right" ref={divRef}>
-                    <h2 id="d1">Sign Up</h2>
+                    <div className="line">
+                        {step > 1 && <ArrowLeft onClick={prevStep} />}
+                        <h2 id="d1">Sign Up</h2>
+                    </div>
 
                     {step === 1 && <Step1 />}
                     {step === 2 && <Step2 />}
                     {step === 3 && <Step3 />}
 
                     <div className="step-buttons">
-                        {step > 1 && <MediumButton onClick={prevStep} text="이전 단계" />}
                         {step < 4 ? (
-                            <MediumButton onClick={nextStep} text="다음 단계" />
+                            <MediumButton onClick={nextStep} text="다음" />
                         ) : (
-                            <MediumButton onClick={submitSignUpData} text="회원가입 완료" />
+                            <MediumButton onClick={submitSignUpData} text="회원가입" />
                         )}
                     </div>
 

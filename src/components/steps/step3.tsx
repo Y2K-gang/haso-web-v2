@@ -17,7 +17,7 @@ const Step3 = () => {
                     name="name"
                     type="text"
                     placeholder="이름을 입력해주세요."
-                    value={signUpData.name}
+                    value={signUpData.tel}
                     onChange={handleSignUpData} icon={<Name/>}
                 />
                 <SmallButton text="인증 요청"></SmallButton>
@@ -26,7 +26,7 @@ const Step3 = () => {
                 name="userId"
                 type="text"
                 placeholder="아이디를 입력해주세요."
-                value={signUpData.userId}
+                value={signUpData.telAccess}
                 onChange={handleSignUpData} icon={<Human/>}
             />
             <TextField

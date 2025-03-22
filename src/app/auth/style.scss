@@ -52,6 +52,10 @@
 
   .tel-access {
     @include flex-center;
+    @include flex-between;
+    button {
+      width: 100px;
+    }
   }
 
   .routing-signup {

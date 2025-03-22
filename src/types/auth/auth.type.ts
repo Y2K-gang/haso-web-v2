@@ -10,6 +10,12 @@ export interface SignUp {
     business_no: string; // 사업자 등록 번호
 }
 
+export interface PhoneResponse<T = any> {
+    status: number;
+    message: string;
+    data: T;
+}
+
 export interface Login {
     userId: string;
     password: string;
