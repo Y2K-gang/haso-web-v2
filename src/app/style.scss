@@ -1,0 +1,38 @@
+@use "src/styles/function/flex" as *;
+@use "src/styles/fonts/typography" as *;
+
+.container {
+  @include flex-column;
+  @include flex-center;
+  gap: 30px;
+
+  #cantFind {
+    @include Display2-Medium;
+    color: var(--Primary-Normal);
+  }
+
+  #description {
+    @include flex-center;
+    text-align: center;
+    p {
+      color: var(--Static-Black);
+      @include Title2-Medium;
+    }
+  }
+
+  #main {
+    @include flex-row;
+    @include flex-center;
+    border: 1px solid var(--Static-Black);
+    gap: 20px;
+    padding: 15px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50px;
+
+    span {
+      @include Body-Medium;
+      color: var(--Static-Black);
+    }
+  }
+}

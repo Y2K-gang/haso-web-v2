@@ -1,4 +1,4 @@
-@import "../color/sementic.scss";
+@use "../color/sementic.scss" as *;
 
 .Toastify__progress-bar {
   height: 4px;

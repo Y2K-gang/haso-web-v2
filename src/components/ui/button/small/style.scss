@@ -1,0 +1,12 @@
+@use "src/styles/fonts/typography" as *;
+
+button {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 8px;
+  @include Label-Bold;
+  border: none;
+  border-radius: var(--Shape-ExtraSmall);
+  background-color: var(--Primary-Normal);
+  color: var(--Label-Disable);
+}

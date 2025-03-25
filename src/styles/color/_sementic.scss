@@ -1,6 +1,6 @@
 @use 'pallete' as *;
 
-html[data-theme="light"] {
+:root {
   --Primary-Normal: #{$Blue-50};
   --Primary-Alternative: #79A9FE;
   --Primary-Assistive: #D4E3FD;

@@ -4,7 +4,7 @@ import {responseErrorInterceptor} from "src/libs/axios/responseErrorInterceptor"
 import { REQUEST_TOKEN, ACCESS_TOKEN } from "src/constants/token/token.constants";
 import Token from "src/libs/token/cookie";
 
-const SERVER_URL = process.env.SERVER_URL;
+const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
 
 const createCustomAxiosInstance = (baseURL?: AxiosRequestConfig) => {
   const baseConfig: AxiosRequestConfig = {

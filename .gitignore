@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/nextjs,macos,webstorm
-# Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,macos,webstorm
+# Created by https://www.toptal.com/developers/gitignore/api/nextjs,webstorm,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,webstorm,macos
 
 ### macOS ###
 # General
@@ -39,7 +39,6 @@ Temporary Items
 /node_modules
 /.pnp
 .pnp.js
-.idea/
 
 # testing
 /coverage
@@ -62,6 +61,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
@@ -75,11 +75,7 @@ next-env.d.ts
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+.idea/**
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -183,4 +179,4 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
 
-# End of https://www.toptal.com/developers/gitignore/api/nextjs,macos,webstorm
+# End of https://www.toptal.com/developers/gitignore/api/nextjs,webstorm,macos
