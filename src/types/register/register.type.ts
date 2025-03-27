@@ -1,6 +1,6 @@
 import { CategoryEnum } from "src/types/category/category.enum";
 
-export interface FormData {
+export interface RegisterProps {
     title: string;
     quantity: number;
     price: number;

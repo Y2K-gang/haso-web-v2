@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { CategoryEnum } from "src/types/category/category.enum";
-import { FormData } from "src/types/register/register.type"
+import { RegisterProps } from "src/types/register/register.type"
 
 export default function useRegisterProduct() {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<RegisterProps>({
         title: "",
         quantity: 0,
         price: 0,
