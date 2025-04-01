@@ -10,21 +10,13 @@ const TOTAL_STEPS = 4;
 
 const useSteps = () => {
     const signUpData = useAtomValue(SignUpStore);
-    const sentCode = useAtomValue(sentVerificationCodeAtom); // 추가
+    const sentCode = useAtomValue(sentVerificationCodeAtom);
     const { handleSignUpData, validateSignUpData } = useSignUp();
     const [step, setStep] = useState(1);
     const [progress, setProgress] = useState((1 / TOTAL_STEPS) * 100);
 
     const nextStep = () => {
         if (!signUpData) return;
-
-        // Step2일 경우: 인증번호 확인
-        if (step === 2) {
-            if (signUpData.telAccess !== sentCode) {
-                Toast("error", "인증번호가 일치하지 않습니다.");
-                return;
-            }
-        }
 
         const error = validateSignUpData(step);
         if (error) {

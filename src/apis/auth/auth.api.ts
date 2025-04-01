@@ -5,7 +5,7 @@ import {Response, Login, NewAccessToken, SignUp} from "src/types/auth/auth.type"
 
 const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
 
-export const login = async (login: Login) => {
+export const login = async (login: Login): Promise<Response> => {
     try {
         const {data} = await hasoAxios.post<Response>(`${SERVER_URL}/member/signin`, login);
         return data;

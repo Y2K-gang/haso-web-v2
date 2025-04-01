@@ -2,18 +2,12 @@ export interface SignUp {
     name: string;
     userId: string;
     password: string;
-    tel: string;
-    telAccess: string; // 전화번호 인증 번호
+    phoneNumber: string; // 전화번호
+    data: string; // 전화번호 인증 번호
     store_name: string; // 상호명
     store_no: string; // 사업장 번호
     fax_no: string; // 팩스 번호
     business_no: string; // 사업자 등록 번호
-}
-
-export interface PhoneResponse<T = any> {
-    status: number;
-    message: string;
-    data: T;
 }
 
 export interface Login {

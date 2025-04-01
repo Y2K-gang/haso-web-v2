@@ -10,6 +10,7 @@ const createCustomAxiosInstance = (baseURL?: AxiosRequestConfig) => {
   const baseConfig: AxiosRequestConfig = {
     headers: {
       "Access-Control-Allow-Origin": "*",
+      Authorization: `Bearer ${Token}`
     },
   };
   return axios.create({
